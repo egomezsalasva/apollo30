@@ -5,30 +5,36 @@ import styled from 'styled-components'
 
 
 //STYLES
-/*const Rectangle = styled.div`
+var buttonHeight = "45px"
+var buttonColor = "white"
+
+/*const ButtonBox = styled.div`
     position: absolute;
     top: 30px;
     left: 0;
     width: 150px;
-    height: 45px;
-    background: white;
+    height: ${buttonHeight};
+    background: ${buttonColor};
 `*/
 
-const RectangleV2 = styled.div`
+const ButtonBoxV2 = styled.div`
     position: absolute;
     top: 15px;
+    /* top: 2.24887556vh; */
     left: 15px;
+    /* left: 4vw; */
     width: 135px;
-    height: 45px;
-    border: white solid 2px;
+    height: ${buttonHeight};
+    border: ${buttonColor} solid 2px;
+    cursor: pointer;
 `
-const ContactText = styled.h3`
+const ButtonText = styled.h3`
     font-family: 'Press Start 2P';
     font-size: 12px;
-    color: #FFFFFF;
+    color: ${buttonColor};
     text-align: center;
     text-transform: uppercase;
-    line-height: 45px;
+    line-height: ${buttonHeight};
 `
 
 
@@ -37,9 +43,9 @@ const ContactText = styled.h3`
 function ContactButton() {
   return (
     <>
-      <RectangleV2>
-        <ContactText>Contact</ContactText>
-      </RectangleV2>
+      <ButtonBoxV2>
+        <ButtonText>Contact</ButtonText>
+      </ButtonBoxV2>
     </>
   )
 }
