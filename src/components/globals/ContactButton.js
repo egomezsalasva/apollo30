@@ -23,7 +23,7 @@ const RectangleV2 = styled.div`
     border: white solid 2px;
 `
 const ContactText = styled.h3`
-    font-family: 'PressStart2P-Regular';
+    font-family: 'Press Start 2P';
     font-size: 12px;
     color: #FFFFFF;
     text-align: center;
