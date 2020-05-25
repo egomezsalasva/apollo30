@@ -1,14 +1,19 @@
+//IMPORTS
 import React from 'react'
 import styled from 'styled-components'
 
-const Rectangle = styled.div`
+
+
+//STYLES
+/*const Rectangle = styled.div`
     position: absolute;
     top: 30px;
     left: 0;
     width: 150px;
     height: 45px;
     background: white;
-`
+`*/
+
 const RectangleV2 = styled.div`
     position: absolute;
     top: 15px;
@@ -17,13 +22,23 @@ const RectangleV2 = styled.div`
     height: 45px;
     border: white solid 2px;
 `
+const ContactText = styled.h3`
+    font-family: 'PressStart2P-Regular';
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 45px;
+`
 
 
+
+//MAIN COMPONENT
 function ContactButton() {
   return (
     <>
       <RectangleV2>
-
+        <ContactText>Contact</ContactText>
       </RectangleV2>
     </>
   )
