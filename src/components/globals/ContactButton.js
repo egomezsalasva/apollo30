@@ -4,7 +4,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-
 //STYLES
 //-Variables
 var buttonHeight = "45px"
