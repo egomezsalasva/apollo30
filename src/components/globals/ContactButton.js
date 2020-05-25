@@ -1,13 +1,15 @@
 //IMPORTS
+//-Modules
 import React from 'react'
 import styled from 'styled-components'
 
 
 
 //STYLES
+//-Variables
 var buttonHeight = "45px"
 var buttonColor = "white"
-
+//-Components
 /*const ButtonBox = styled.div`
     position: absolute;
     top: 30px;
@@ -16,7 +18,6 @@ var buttonColor = "white"
     height: ${buttonHeight};
     background: ${buttonColor};
 `*/
-
 const ButtonBoxV2 = styled.div`
     position: absolute;
     top: 15px;
@@ -38,7 +39,6 @@ const ButtonText = styled.h3`
 `
 
 
-
 //MAIN COMPONENT
 function ContactButton() {
   return (
@@ -49,5 +49,4 @@ function ContactButton() {
     </>
   )
 }
-
 export default ContactButton
