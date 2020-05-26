@@ -1,6 +1,7 @@
 //IMPORTS
 //-Modules
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 
@@ -42,9 +43,11 @@ const ButtonText = styled.h3`
 function ContactButton() {
   return (
     <>
-      <ButtonBoxV2>
-        <ButtonText to="/contact">Contact</ButtonText>
-      </ButtonBoxV2>
+      <Link to="/contact">
+        <ButtonBoxV2>
+          <ButtonText to="/contact" >Contact</ButtonText>
+        </ButtonBoxV2>
+      </Link>
     </>
   )
 }

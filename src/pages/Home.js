@@ -13,7 +13,8 @@ import HomeNav from '../components/home/HomeNav'
 
 //-Components
 const Container = styled.div`
-    overflow: hidden;
+   max-height: 100vh;
+   max-width: 100vw;
 `
 
 

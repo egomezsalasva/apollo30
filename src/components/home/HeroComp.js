@@ -11,8 +11,9 @@ import logoApollo from '../../imgs/logoApollo-3D@2x.png'
 
 //-Components
 const Container = styled.div`
-    margin-top: 50vh;
-    transform: translateY(calc(-50% - 30px));
+    margin-top: 170px;
+    margin-top: 25.4872564vh;
+    margin-top: 25vh;
     text-align: center;
 `
 const Lettering = styled.img`
@@ -32,6 +33,8 @@ const Slogan = styled.p`
     color: #FFFFFF;
     text-align: center;
     width: 225px;
+    width: 60vw;
+    max-width: 300px;
     margin: 45px auto 0;
 
 `
