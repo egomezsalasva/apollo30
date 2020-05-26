@@ -9,29 +9,26 @@ import logoApollo from '../../imgs/logoApollo-3D@2x.png'
 //STYLES
 //-Variables
 const lightColour = "white";
-
 const h45px = "6.74662669vh"
 const h55px = "8.24587706vh"
+const h108px = "16.191904vh"
 const h170px = "25.4872564vh"
-
 const w225px = "60vw"
 
 //-Components
 const Container = styled.div`
-    /* margin-top: 170px; */
+    /* margin-top: ${h170px}; */
     margin-top: 25vh;
     text-align: center;
 `
 const Lettering = styled.img`
     display: block;
-    /* width: 195px; */
-    /* height: 55px; */
     height: ${h55px};
     margin: 0 auto;
 `
 const Logo = styled.img`
     display: block;
-    width: 150px;
+    height: ${h108px};
     margin: ${h45px} auto 0;
 `
 const Slogan = styled.p`
@@ -40,7 +37,6 @@ const Slogan = styled.p`
     line-height: 1.3;
     color: ${lightColour};
     text-align: center;
-    width: 225px;
     width: ${w225px};
     max-width: 300px;
     margin: ${h45px} auto 0;
