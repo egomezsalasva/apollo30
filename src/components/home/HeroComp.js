@@ -12,13 +12,14 @@ const lightColour = "white";
 const h45px = "6.74662669vh"
 const h55px = "8.24587706vh"
 const h108px = "16.191904vh"
+const h140px = "20.9895052vh"
 const h170px = "25.4872564vh"
 const w225px = "60vw"
 
 //-Components
 const Container = styled.div`
     /* margin-top: ${h170px}; */
-    margin-top: 25vh;
+    margin-top: ${h140px};
     text-align: center;
 `
 const Lettering = styled.img`

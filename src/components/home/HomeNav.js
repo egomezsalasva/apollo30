@@ -7,11 +7,13 @@ import styled from 'styled-components'
 
 //STYLES
 //-Variables
-
+const lightColour = "white"
+const h45px = "6.74662669vh"
+const h60px = "8.99550225vh"
 //-Components
 const Container = styled.div`
     position: relative;
-    margin: 60px auto 0;
+    margin: ${h60px} auto 0;
 `
 const NavOptionArea = styled.div`
     width: 150px;
@@ -21,7 +23,7 @@ const NavOptionArea = styled.div`
 const NavTitle = styled.p`
     font-family: 'Press Start 2P';
     font-size: 12px;
-    color: #FFFFFF;
+    color: ${lightColour};
     letter-spacing: 0;
     text-align: center;
     line-height: 60px;
