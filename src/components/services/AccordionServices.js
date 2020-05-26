@@ -3,23 +3,20 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 //-Components
-import AccorionSection from './AccordionSection'
+//import AccorionSection from './AccordionSection'
 
 
 //DATA (STRAPI)
 const accordionData = [
   {
-    id: 0,
     title: "Creativity",
     text: "We create content (advertising, film, social, digital and mobile) that transcends traditional media and blurs the lines between products, experiences, content and marketing."
   },
   {
-    id: 1,
     title: "Branding",
     text: "Todays consumers do not buy a brand,they must feel part of it. We help brands simplify and clarify who they are to better convey and truely connect with their target audience."
   },
   {
-    id: 2,
     title: "Development",
     text: "Once we have our user interface ready and our user experience thought out we do pixel perfect development."
   },
@@ -61,6 +58,7 @@ const Text= styled.p`
     display: ${props => props.active ? "inline-blockck" : "none"};;
 `
 
+
 //MAIN COMPONENT
 function AccordionServices() {
   const [activeAccordionOne, setActiveAccordionOne] = useState(false)
@@ -83,25 +81,22 @@ function AccordionServices() {
   }
   return (
       <AccordionContainer>
-        {/* {accordionData.map( section => {
-          return  <AccorionSection 
-                      key={section.id} 
-                      title={section.title} 
-                      text={section.text} 
-                  />
-        })} */}
+
         <SectionContainer onClick={() => activeAccordionOneHandler()}>
           <Title>{accordionData[0].title}</Title>
           <Text active={activeAccordionOne}>{accordionData[0].text}</Text>
         </SectionContainer>
+
         <SectionContainer onClick={() => activeAccordionTwoHandler()}>
           <Title>{accordionData[1].title}</Title>
           <Text active={activeAccordionTwo}>{accordionData[1].text}</Text>
         </SectionContainer>
+
         <SectionContainer onClick={() => activeAccordionThreeHandler()}>
           <Title>{accordionData[2].title}</Title>
           <Text active={activeAccordionThree}>{accordionData[2].text}</Text>
         </SectionContainer>
+        
       </AccordionContainer>
   )
 }
