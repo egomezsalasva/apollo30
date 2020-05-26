@@ -1,8 +1,9 @@
 //IMPORTS
 //-Modules
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 //-Components
+
 
 //STYLES
 //-Variables
@@ -35,16 +36,16 @@ const Text= styled.p`
     display: ${props => props.active ? "inline-blockck" : "none"};;
 `
 
+
 //MAIN COMPONENT
 function AccordionSection({title, text, activeState}) {
-
-    
-
+  const [activeAccordion, setActiveAccordion] = useState(false)
+  //TODO Make others collapse once you click on one
   return (
     <>
-      <Container>
+      <Container onClick={() => setActiveAccordion(!activeAccordion)}>
         <Title>{title}</Title>
-        <Text active={activeState} >{text}</Text>
+        <Text active={activeAccordion}>{text}</Text>
       </Container>
     </>
   )
