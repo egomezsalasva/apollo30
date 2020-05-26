@@ -61,8 +61,7 @@ const Text= styled.p`
     display: ${props => props.active ? "inline-blockck" : "none"};;
 `
 
-
-
+//MAIN COMPONENT
 function AccordionServices() {
   const [activeAccordionOne, setActiveAccordionOne] = useState(false)
   const [activeAccordionTwo, setActiveAccordionTwo] = useState(false)
