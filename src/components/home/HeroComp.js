@@ -13,7 +13,6 @@ import logoApollo from '../../imgs/logoApollo-3D@2x.png'
 const Container = styled.div`
     margin-top: 50vh;
     transform: translateY(calc(-50% - 30px));
-    /* background: red; */
     text-align: center;
 `
 const Lettering = styled.img`
