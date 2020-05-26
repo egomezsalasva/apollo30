@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Gotham Book';
+  font-family: 'Gotham-Book';
   src: url('./fonts/Gotham-Book.eot');
   src: url('./fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
       url('./fonts/Gotham-Book.woff2') format('woff2'),
@@ -18,7 +18,7 @@
 
 body {
   margin: 0;
-  font-family: 'Gotham Book', 'Helvetica Neue', sans-serif;
+  font-family: 'Gotham-Book', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /*Custom Code*/
