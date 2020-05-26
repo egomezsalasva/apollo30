@@ -5,6 +5,7 @@ import styled from 'styled-components'
 //-Components
 import ContactButton from '../components/globals/ContactButton'
 import HeroComp from '../components/home/HeroComp'
+import HomeNav from '../components/home/HomeNav'
 
 
 //STYLES
@@ -22,6 +23,7 @@ function Home() {
     <Container>
       <ContactButton/>
       <HeroComp/>
+      <HomeNav/>
     </Container>
   )
 }

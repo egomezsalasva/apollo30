@@ -43,7 +43,7 @@ function ContactButton() {
   return (
     <>
       <ButtonBoxV2>
-        <ButtonText>Contact</ButtonText>
+        <ButtonText to="/contact">Contact</ButtonText>
       </ButtonBoxV2>
     </>
   )
