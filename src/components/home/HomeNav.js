@@ -43,7 +43,7 @@ function HomeNav() {
       </Link>
       <Link to="/projects">
         <NavOptionArea>
-            <NavTitle>Projects</NavTitle>
+            <NavTitle>Launches</NavTitle>
         </NavOptionArea>
       </Link>
     </Container>
