@@ -5,24 +5,26 @@ import styled from 'styled-components'
 //-Components
 import AccorionSection from './AccordionSection'
 
+
 //DATA (STRAPI)
 const accordionData = [
   {
     id: 0,
     title: "Creativity",
-    text: "We create content (advertising, film, social, digital and mobile) that transcends traditional media and blurs the lines between products, experiences, content and marketing"
+    text: "We create content (advertising, film, social, digital and mobile) that transcends traditional media and blurs the lines between products, experiences, content and marketing."
   },
   {
     id: 1,
     title: "Branding",
-    text: "Text Here"
+    text: "Todays consumers do not buy a brand,they must feel part of it. We help brands simplify and clarify who they are to better convey and truely connect with their target audience."
   },
   {
     id: 2,
     title: "Development",
-    text: "Text Here"
+    text: "Once we have our user interface ready and our user experience thought out we do pixel perfect development."
   },
 ]
+
 
 //STYLES
 const AccordionContainer= styled.div`
