@@ -15,6 +15,8 @@ const h108px = "16.191904vh"
 const h140px = "20.9895052vh"
 const h170px = "25.4872564vh"
 const w225px = "60vw"
+const w240px = "64vw"
+const w255px = "68vw"
 
 //-Components
 const Container = styled.div`
@@ -38,7 +40,7 @@ const Slogan = styled.p`
     line-height: 1.3;
     color: ${lightColour};
     text-align: center;
-    width: ${w225px};
+    width: ${w255px};
     max-width: 300px;
     margin: ${h45px} auto 0;
 

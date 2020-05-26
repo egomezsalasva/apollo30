@@ -13,7 +13,7 @@ const h60px = "8.99550225vh"
 //-Components
 const Container = styled.div`
     position: relative;
-    margin: ${h60px} auto 0;
+    margin: ${h45px} auto 0;
 `
 const NavOptionArea = styled.div`
     width: 150px;
