@@ -10,6 +10,7 @@ const lightColour = "white"
 const smallFont = "0.75em"
 const mediumFont = "1.5625em"
 const h17o5px = "2.62368816vh"
+const w285px = "76vw"
 //-Components
 const Container= styled.div`
     text-align: center;
@@ -26,13 +27,16 @@ const Title= styled.h2`
 `
 const Text= styled.p`
     color: ${lightColour};
-    text-align: center;
     font-size: ${smallFont};
-    display: none;
+    line-height: 1.3;
+    width: ${w285px};
+    text-align: center;
+    margin: 0 auto 15px;
+    display: ${props => props.active ? "inline-blockck" : "none"};;
 `
 
 //MAIN COMPONENT
-function AccordionSection({title, text}) {
+function AccordionSection({title, text, activeState}) {
 
     
 
@@ -40,7 +44,7 @@ function AccordionSection({title, text}) {
     <>
       <Container>
         <Title>{title}</Title>
-        <Text>{text}</Text>
+        <Text active={activeState} >{text}</Text>
       </Container>
     </>
   )
