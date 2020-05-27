@@ -3,6 +3,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 //-Components
+import ContactButton from './components/globals/ContactButton'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import Projects from './pages/Projects'
@@ -15,6 +16,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ContactButton/>
         <Switch>
           <Route path="/contact">
             <Contact />

@@ -20,6 +20,7 @@ var buttonColor = "white"
 `*/
 const ButtonBoxV2 = styled.div`
     position: absolute;
+    z-index: 100;
     top: 15px;
     /* top: 2.24887556vh; */
     left: 15px;
