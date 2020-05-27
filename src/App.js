@@ -11,6 +11,7 @@ import Services from './pages/Services'
 import Projects from './pages/Projects'
 import InnerProject from './pages/InnerProject'
 import Contact from './pages/Contact'
+import CustomCursor from './components/globals/CustomCursor'
 
 const GlobalStyle = createGlobalStyle`
 
@@ -20,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none;
   }
 
   a{
@@ -57,6 +59,7 @@ function App() {
     <Router>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle/>
+        <CustomCursor />
         <div className="App">
           <ContactButton/>
           <Switch>
