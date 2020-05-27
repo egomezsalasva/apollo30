@@ -1,9 +1,9 @@
 //IMPORTS
 //-Modules
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
+import gsap from 'gsap'
 //-Components
-//import AccorionSection from './AccordionSection'
 
 
 //DATA (STRAPI)
@@ -37,6 +37,7 @@ const AccordionContainer= styled.div`
 `
 const SectionContainer= styled.div`
     text-align: center;
+    transition: all 1.6s; 
 `
 const Title= styled.h2`
     display: inline-block;
@@ -54,47 +55,52 @@ const Text= styled.p`
     line-height: 1.3;
     width: ${w285px};
     text-align: center;
-    margin: 0 auto 15px;
-    display: ${props => props.active ? "inline-blockck" : "none"};;
+    margin: 0 auto;
+    /* max-height: 0px;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0; */
+    display: none;
 `
 
 
 //MAIN COMPONENT
 function AccordionServices() {
-  const [activeAccordionOne, setActiveAccordionOne] = useState(false)
-  const [activeAccordionTwo, setActiveAccordionTwo] = useState(false)
-  const [activeAccordionThree, setActiveAccordionThree] = useState(false)
-  const activeAccordionOneHandler = () => {
-    setActiveAccordionOne(!activeAccordionOne)
-    setActiveAccordionTwo(false)
-    setActiveAccordionThree(false)
-  }
-  const activeAccordionTwoHandler = () => {
-    setActiveAccordionOne(false)
-    setActiveAccordionTwo(!activeAccordionTwo)
-    setActiveAccordionThree(false)
-  }
-  const activeAccordionThreeHandler = () => {
-    setActiveAccordionOne(false)
-    setActiveAccordionTwo(false)
-    setActiveAccordionThree(!activeAccordionThree)
-  }
+
+  //ANIMATION
+  //-Intro Animation
+  useEffect(()=>{
+    const introTl = gsap.timeline()
+    introTl.from(".accordionTitle", 1.6, {
+      opacity: 0,
+      y: 15,
+      ease: "power2.out",
+      stagger: {
+        amount: 0.4,
+      },
+    })
+  }, [])
+
+  //-Click One Animation
+ 
+
+
   return (
       <AccordionContainer>
 
-        <SectionContainer onClick={() => activeAccordionOneHandler()}>
-          <Title>{accordionData[0].title}</Title>
-          <Text active={activeAccordionOne}>{accordionData[0].text}</Text>
+        <SectionContainer>
+          <Title className="accordionTitle">{accordionData[0].title}</Title>
+          <Text>{accordionData[0].text}</Text>
         </SectionContainer>
 
-        <SectionContainer onClick={() => activeAccordionTwoHandler()}>
-          <Title>{accordionData[1].title}</Title>
-          <Text active={activeAccordionTwo}>{accordionData[1].text}</Text>
+        <SectionContainer>
+          <Title className="accordionTitle" >{accordionData[1].title}</Title>
+          <Text className="accordionTextTwo" >{accordionData[1].text}</Text>
         </SectionContainer>
 
-        <SectionContainer onClick={() => activeAccordionThreeHandler()}>
-          <Title>{accordionData[2].title}</Title>
-          <Text active={activeAccordionThree}>{accordionData[2].text}</Text>
+        <SectionContainer>
+          <Title className="accordionTitle">{accordionData[2].title}</Title>
+          <Text className="accordionTextThree" >{accordionData[2].text}</Text>
         </SectionContainer>
         
       </AccordionContainer>

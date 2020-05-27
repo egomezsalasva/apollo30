@@ -46,7 +46,7 @@ function ContactButton() {
     <>
       <Link to="/contact">
         <ButtonBoxV2>
-          <ButtonText to="/contact" >Contact</ButtonText>
+          <ButtonText>Contact</ButtonText>
         </ButtonBoxV2>
       </Link>
     </>

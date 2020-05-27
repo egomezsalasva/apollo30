@@ -2,6 +2,7 @@
 //-Modules
 import React from 'react'
 import styled from 'styled-components'
+//-Images
 import letteringApollo from '../../imgs/letteringApollo.svg'
 import logoApollo from '../../imgs/logoApollo-3D@2x.png'
 
@@ -13,10 +14,7 @@ const h45px = "6.74662669vh"
 const h55px = "8.24587706vh"
 const h108px = "16.191904vh"
 const h125px = "18.7406296852vh"
-const h140px = "20.9895052vh"
 const h170px = "25.4872564vh"
-const w225px = "60vw"
-const w240px = "64vw"
 const w255px = "68vw"
 
 //-Components
