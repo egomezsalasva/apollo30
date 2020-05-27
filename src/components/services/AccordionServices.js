@@ -1,7 +1,7 @@
 //IMPORTS
 //-Modules
-import React, {useState, useEffect, useRef } from 'react'
-import styled from 'styled-components'
+import React, { useEffect, useState } from 'react'
+import styled, { css } from 'styled-components'
 import gsap from 'gsap'
 //-Components
 
@@ -56,16 +56,44 @@ const Text= styled.p`
     width: ${w285px};
     text-align: center;
     margin: 0 auto;
-    /* max-height: 0px;
+    max-height: 0px;
     height: 0px;
     overflow: hidden;
-    opacity: 0; */
-    display: none;
+    opacity: 0;
+    transition: all 0.8s ease-out;
+    ${props => props.opened && css`
+      max-height: none;
+      height: auto;
+      overflow: visible;
+      opacity: 1;
+      margin-bottom: 15px;
+      transition: all 0.8s ease-out;
+    `}
 `
 
 
 //MAIN COMPONENT
 function AccordionServices() {
+
+  const [one, setOne] = useState(false)
+  const [two, setTwo] = useState(false)
+  const [three, setThree] = useState(false)
+
+  const clickHandlerOne = () => {
+    setOne(!one)
+    setTwo(false)
+    setThree(false)
+  }
+  const clickHandlerTwo = () => {
+    setOne(false)
+    setTwo(!two)
+    setThree(false)
+  }
+  const clickHandlerThree = () => {
+    setOne(false)
+    setTwo(false)
+    setThree(!three)
+  }
 
   //ANIMATION
   //-Intro Animation
@@ -88,19 +116,19 @@ function AccordionServices() {
   return (
       <AccordionContainer>
 
-        <SectionContainer>
+        <SectionContainer onClick={() => clickHandlerOne()}>
           <Title className="accordionTitle">{accordionData[0].title}</Title>
-          <Text>{accordionData[0].text}</Text>
+          <Text opened={one} >{accordionData[0].text}</Text>
         </SectionContainer>
 
-        <SectionContainer>
+        <SectionContainer onClick={() => clickHandlerTwo()}>
           <Title className="accordionTitle" >{accordionData[1].title}</Title>
-          <Text className="accordionTextTwo" >{accordionData[1].text}</Text>
+          <Text opened={two} >{accordionData[1].text}</Text>
         </SectionContainer>
 
-        <SectionContainer>
+        <SectionContainer onClick={() => clickHandlerThree()}>
           <Title className="accordionTitle">{accordionData[2].title}</Title>
-          <Text className="accordionTextThree" >{accordionData[2].text}</Text>
+          <Text opened={three} >{accordionData[2].text}</Text>
         </SectionContainer>
         
       </AccordionContainer>
