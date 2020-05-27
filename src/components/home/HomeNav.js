@@ -38,12 +38,12 @@ function HomeNav() {
     <Container>
       <Link to="/services">
         <NavOptionArea>
-            <NavTitle>Services</NavTitle>
+            <NavTitle className="servicesTitle" >Services</NavTitle>
         </NavOptionArea>
       </Link>
       <Link to="/projects">
         <NavOptionArea>
-            <NavTitle>Launches</NavTitle>
+            <NavTitle className="launchesTitle" >Launches</NavTitle>
         </NavOptionArea>
       </Link>
     </Container>
