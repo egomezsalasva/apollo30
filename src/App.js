@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
+    /* cursor: none; */
   }
 
   a{
@@ -59,7 +59,7 @@ function App() {
     <Router>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle/>
-        <CustomCursor />
+        {/* <CustomCursor /> */}
         <div className="App">
           <ContactButton/>
           <Switch>
