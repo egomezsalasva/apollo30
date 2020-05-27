@@ -9,8 +9,6 @@ import styled from 'styled-components'
 //-Variables
 const lightColour = "white"
 const h30px = "4.49775112444vh"
-const h45px = "6.74662669vh"
-const h60px = "8.99550225vh"
 //-Components
 const Container = styled.div`
     position: relative;

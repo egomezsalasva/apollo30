@@ -60,14 +60,14 @@ const Text= styled.p`
     height: 0px;
     overflow: hidden;
     opacity: 0;
-    transition: all 0.8s ease-out;
+    transition: all 0.8s ease-in-out;
     ${props => props.opened && css`
       max-height: none;
       height: auto;
       overflow: visible;
       opacity: 1;
       margin-bottom: 15px;
-      transition: all 0.8s ease-out;
+      transition: all 0.8s ease-in-out;
     `}
 `
 
