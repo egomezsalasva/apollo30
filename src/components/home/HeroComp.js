@@ -9,17 +9,14 @@ import logoApollo from '../../imgs/logoApollo-3D@2x.png'
 
 //STYLES
 //-Variables
-const lightColour = "white";
 const h45px = "6.74662669vh"
 const h55px = "8.24587706vh"
 const h108px = "16.191904vh"
 const h125px = "18.7406296852vh"
-const h170px = "25.4872564vh"
 const w255px = "68vw"
 
 //-Components
 const Container = styled.div`
-    /* margin-top: ${h170px}; */
     margin-top: ${h125px};
     text-align: center;
 `
@@ -37,7 +34,7 @@ const Slogan = styled.p`
     font-family: 'Gotham-Book';
     font-size: 0.75em;
     line-height: 1.3;
-    color: ${lightColour};
+    color: ${props => props.theme.text};
     text-align: center;
     width: ${w255px};
     max-width: 300px;
@@ -48,6 +45,7 @@ const Slogan = styled.p`
 
 //MAIN COMPONENT
 function HeroComp({letteringLogoClass, planetLogoClass, sloganClass}) {
+
   
   return (
     <Container>

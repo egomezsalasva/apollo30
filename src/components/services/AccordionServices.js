@@ -61,6 +61,7 @@ const Text= styled.p`
     height: 0px;
     overflow: hidden;
     opacity: 0;
+    transform-origin: center;
     transition: all 0.8s ease-in-out;
     ${props => props.opened && css`
       max-height: none;
@@ -68,6 +69,7 @@ const Text= styled.p`
       overflow: visible;
       opacity: 1;
       margin-bottom: 15px;
+      transform-origin: center;
       transition: all 0.8s ease-in-out;
     `}
 `

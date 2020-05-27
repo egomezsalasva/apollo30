@@ -8,7 +8,6 @@ import styled from 'styled-components'
 //STYLES
 //-Variables
 var buttonHeight = "45px"
-var buttonColor = "white"
 //-Components
 /*const ButtonBox = styled.div`
     position: absolute;
@@ -27,13 +26,13 @@ const ButtonBoxV2 = styled.div`
     /* left: 4vw; */
     width: 135px;
     height: ${buttonHeight};
-    border: ${buttonColor} solid 2px;
+    border: ${props => props.theme.text} solid 2px;
     cursor: pointer;
 `
 const ButtonText = styled.h3`
     font-family: 'Press Start 2P';
     font-size: 12px;
-    color: ${buttonColor};
+    color: ${props => props.theme.text};
     text-align: center;
     text-transform: uppercase;
     line-height: ${buttonHeight};
