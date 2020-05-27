@@ -26,7 +26,6 @@ const ArrowIcon = styled.img`
 `
 
 
-
 //MAIN COMPONENT
 function ArrowDownButton() {
   return (
