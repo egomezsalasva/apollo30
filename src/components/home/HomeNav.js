@@ -29,21 +29,23 @@ const NavTitle = styled.p`
     text-align: center;
     line-height: 60px;
     text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(15px);
 `
 
 
 //MAIN COMPONENT
-function HomeNav() {
+function HomeNav({serviceTitleClass, launchesTitleClass}) {
   return (
     <Container>
       <Link to="/services">
         <NavOptionArea>
-            <NavTitle className="servicesTitle" >Services</NavTitle>
+            <NavTitle className={serviceTitleClass} >Services</NavTitle>
         </NavOptionArea>
       </Link>
       <Link to="/projects">
         <NavOptionArea>
-            <NavTitle className="launchesTitle" >Launches</NavTitle>
+            <NavTitle className={launchesTitleClass} >Launches</NavTitle>
         </NavOptionArea>
       </Link>
     </Container>

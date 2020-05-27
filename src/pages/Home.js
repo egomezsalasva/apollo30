@@ -10,6 +10,7 @@ import HomeNav from '../components/home/HomeNav'
 //MAIN COMPONENT
 function Home() {
 
+  //ANIMATION
   useEffect(()=>{
     const tl = gsap.timeline()
     tl.from([".planetLogo"], 1.2, {
@@ -19,9 +20,9 @@ function Home() {
     }).from([".letteringLogo", ".slogan" ], 1.2, {
       opacity: 0,
       ease: "power3.out",
-    }).from([".servicesTitle", ".launchesTitle"], 1.2, {
-      opacity: 0,
-      y: 15,
+    }).to([".servicesTitle", ".launchesTitle"], 1.2, {
+      opacity: 1,
+      y: 0,
       delay: -1.2,
       ease: "power3.out",
       stagger: {
@@ -32,8 +33,15 @@ function Home() {
 
   return (
     <>
-      <HeroComp />
-      <HomeNav/>
+      <HeroComp
+        letteringLogoClass={"letteringLogo"}
+        planetLogoClass={"planetLogo"}
+        sloganClass={"slogan"}
+      />
+      <HomeNav 
+        serviceTitleClass={"servicesTitle"} 
+        launchesTitleClass={"launchesTitle"}
+      />
     </>
   )
 }

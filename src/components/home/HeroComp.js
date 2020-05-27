@@ -49,13 +49,13 @@ const Slogan = styled.p`
 
 
 //MAIN COMPONENT
-function HeroComp() {
+function HeroComp({letteringLogoClass, planetLogoClass, sloganClass}) {
   
   return (
     <Container>
-      <Lettering src={letteringApollo} alt="Apollo30 Lettering" className="letteringLogo" />
-      <Logo src={logoApollo} alt="Apollo30 Logo" className="planetLogo" />
-      <Slogan className="slogan" >We are a creativity, branding and development agency and we are celebrating our first revolution movement around the sun</Slogan>
+      <Lettering src={letteringApollo} alt="Apollo30 Lettering" className={letteringLogoClass} />
+      <Logo src={logoApollo} alt="Apollo30 Logo" className={planetLogoClass} />
+      <Slogan className={sloganClass} >We are a creativity, branding and development agency and we are celebrating our first revolution movement around the sun</Slogan>
     </Container>
   )
 }
