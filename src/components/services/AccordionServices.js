@@ -29,6 +29,7 @@ const lightColour = "white"
 const smallFont = "0.75em"
 const mediumFont = "1.5625em"
 const h17o5px = "2.62368816vh"
+const h22px = "3.29835082vh"
 const w285px = "76vw"
 //-Components
 const AccordionContainer= styled.div`
@@ -43,7 +44,7 @@ const Title= styled.h2`
     display: inline-block;
     color: ${lightColour};
     text-align: center;
-    padding: ${h17o5px} 0;
+    padding: ${h22px} 0;
     font-family: 'Gotham-Black';
     font-size: ${mediumFont};
     letter-spacing: 0;
