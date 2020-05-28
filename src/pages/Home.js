@@ -28,6 +28,7 @@ function Home() {
       scale: 0.75,
       opacity: 0,
       ease: "power3.out",
+      delay: 0.7,
     }).from([".letteringLogo", ".slogan" ], 1.2, {
       opacity: 0,
       ease: "power3.out",
