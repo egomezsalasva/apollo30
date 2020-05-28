@@ -28,12 +28,13 @@ const accordionData = [
 const lightColour = "white"
 const smallFont = "0.75em"
 const mediumFont = "1.5625em"
-const h17o5px = "2.62368816vh"
+// const h17o5px = "2.62368816vh"
 const h22px = "3.29835082vh"
 const w285px = "76vw"
 //-Components
 const AccordionContainer= styled.div`
-    margin-top: 50vh;
+    position: relative;
+    top: 50vh;
     transform: translateY(-50%);
 `
 const SectionContainer= styled.div`

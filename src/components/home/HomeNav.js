@@ -10,7 +10,6 @@ import styled from 'styled-components'
 const h30px = "4.49775112444vh"
 //-Components
 const Container = styled.div`
-    position: relative;
     margin: ${h30px} auto 0;
 `
 const NavOptionArea = styled.div`

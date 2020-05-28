@@ -1,10 +1,21 @@
 //IMPORTS
 //-Modules
 import React, { useEffect } from 'react'
+import styled from 'styled-components'
 import gsap from 'gsap'
 //-Components
 import HeroComp from '../components/home/HeroComp'
 import HomeNav from '../components/home/HomeNav'
+
+//STYLES
+//-Variables
+const h125px = "18.7406296852vh"
+//-Components
+const Container = styled.div`
+    position: relative;
+    top: ${h125px};
+    text-align: center;
+`
 
 
 //MAIN COMPONENT
@@ -32,7 +43,7 @@ function Home() {
   }, [])
 
   return (
-    <>
+    <Container>
       <HeroComp
         letteringLogoClass={"letteringLogo"}
         planetLogoClass={"planetLogo"}
@@ -42,7 +53,7 @@ function Home() {
         serviceTitleClass={"servicesTitle"} 
         launchesTitleClass={"launchesTitle"}
       />
-    </>
+    </Container>
   )
 }
 export default Home

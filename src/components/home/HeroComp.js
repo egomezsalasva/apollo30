@@ -12,12 +12,10 @@ import logoApollo from '../../imgs/logoApollo-3D@2x.png'
 const h45px = "6.74662669vh"
 const h55px = "8.24587706vh"
 const h108px = "16.191904vh"
-const h125px = "18.7406296852vh"
 const w255px = "68vw"
 
 //-Components
 const Container = styled.div`
-    margin-top: ${h125px};
     text-align: center;
 `
 const Lettering = styled.img`
