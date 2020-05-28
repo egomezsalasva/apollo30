@@ -4,6 +4,7 @@ import React from 'react'
 import { Switch, Route } from "react-router-dom"
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { normalize } from 'styled-normalize'
+import {CSSTransition} from 'react-transition-group'
 //-Components
 import ContactButton from './components/globals/ContactButton'
 import Home from './pages/Home'
@@ -32,7 +33,8 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     /*Custom Code*/
-    background-color: ${props => props.theme.background};
+    /* background-color: ${props => props.theme.background}; */
+    background: black;
     overscroll-behavior: none;
     overflow-x: hidden;
   }
@@ -41,11 +43,11 @@ const GlobalStyle = createGlobalStyle`
 
 //ROUTE MANAGEMENT
 const routes = [
-  { path: "/contact", name: "Contact", Component: Contact},
-  { path: "/projects/:idName/:idNumber", name: "Projects", Component: InnerProject},
-  { path: "/projects", name: "Projects", Component: Projects},
-  { path: "/services", name: "Services", Component: Services},
   { path: "/", name: "Home", Component: Home},
+  { path: "/services", name: "Services", Component: Services},
+  { path: "/projects", name: "Projects", Component: Projects},
+  { path: "/projects/:idName/:idNumber", name: "Projects", Component: InnerProject},
+  { path: "/contact", name: "Contact", Component: Contact},
 ]
 
 
@@ -68,9 +70,13 @@ function App() {
         <div className="container">
           {routes.map(({ path, Component, name })=>{
             return <Route key={name} path={path} exact>
-                      <div className="page">
-                        <Component/>
-                      </div>
+                      {({match}) => (
+                        <CSSTransition in={match != null} timeout={1200} classNames="page" unmountOnExit >
+                          <div className="page">
+                            <Component/>
+                          </div>
+                        </CSSTransition>
+                      )}
                     </Route> 
           })}
         </div>
