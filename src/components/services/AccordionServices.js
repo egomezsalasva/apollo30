@@ -107,6 +107,7 @@ function AccordionServices() {
       opacity: 0,
       y: 15,
       ease: "power2.out",
+      delay: 0.7,
       stagger: {
         amount: 0.4,
       },

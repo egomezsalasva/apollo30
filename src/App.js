@@ -71,7 +71,7 @@ function App() {
           {routes.map(({ path, Component, name })=>{
             return <Route key={name} path={path} exact>
                       {({match}) => (
-                        <CSSTransition in={match != null} timeout={1200} classNames="page" unmountOnExit >
+                        <CSSTransition in={match != null} timeout={1200} classNames={path === "/" ? "" : "page"} unmountOnExit >
                           <div className="page">
                             <Component/>
                           </div>
