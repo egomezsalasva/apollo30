@@ -65,17 +65,15 @@ function App() {
         <GlobalStyle/>{/* Stylesheet Styled Components*/}
         {/* <CustomCursor /> */}
         <ContactButton/>
-        <Switch>
-          <div className="container">
-            {routes.map(({ path, Component, name })=>{
-              return <Route key={name} path={path} exact>
-                        <div className="page">
-                          <Component/>
-                        </div>
-                      </Route> 
-            })}
-          </div>
-        </Switch>
+        <div className="container">
+          {routes.map(({ path, Component, name })=>{
+            return <Route key={name} path={path} exact>
+                      <div className="page">
+                        <Component/>
+                      </div>
+                    </Route> 
+          })}
+        </div>
       </ThemeProvider>
   )
 }
