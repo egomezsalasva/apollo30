@@ -1,7 +1,7 @@
 //IMPORTS
 //-Modules
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { Switch, Route } from "react-router-dom"
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { normalize } from 'styled-normalize'
 //-Components
@@ -11,23 +11,21 @@ import Services from './pages/Services'
 import Projects from './pages/Projects'
 import InnerProject from './pages/InnerProject'
 import Contact from './pages/Contact'
-import CustomCursor from './components/globals/CustomCursor'
+//import CustomCursor from './components/globals/CustomCursor'
 
+
+//STYLES
 const GlobalStyle = createGlobalStyle`
-
   ${normalize}
-
   *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* cursor: none; */
   }
-
   a{
     text-decoration: none;
   }
-
   body {
     margin: 0;
     font-family: 'Gotham-Book', 'Helvetica Neue', sans-serif;
@@ -41,47 +39,44 @@ const GlobalStyle = createGlobalStyle`
 `
 
 
+//ROUTE MANAGEMENT
+const routes = [
+  { path: "/contact", name: "Contact", Component: Contact},
+  { path: "/projects/:idName/:idNumber", name: "Projects", Component: InnerProject},
+  { path: "/projects", name: "Projects", Component: Projects},
+  { path: "/services", name: "Services", Component: Services},
+  { path: "/", name: "Home", Component: Home},
+]
 
 
 //MAIN COMPONENT
 function App() {
-
+  //Dark & Light Vesrions
   const darkTheme = {
     background: "black",
     text: "white",
   }
-  const lightTheme = {
-    background: "white",
-    text: "black",
-  }
-
+  // const lightTheme = {
+  //   background: "white",
+  //   text: "black",
+  // }
   return (
-    <Router>
       <ThemeProvider theme={darkTheme}>
-        <GlobalStyle/>
+        <GlobalStyle/>{/* Stylesheet Styled Components*/}
         {/* <CustomCursor /> */}
-        <div className="App">
-          <ContactButton/>
-          <Switch>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/projects/:id">
-              <InnerProject />
-            </Route>
-            <Route path="/projects">
-              <Projects />
-            </Route>
-            <Route path="/services">
-              <Services />
-            </Route>
-            <Route exact path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </div>
+        <ContactButton/>
+        <Switch>
+          <div className="container">
+            {routes.map(({ path, Component, name })=>{
+              return <Route key={name} path={path} exact>
+                        <div className="page">
+                          <Component/>
+                        </div>
+                      </Route> 
+            })}
+          </div>
+        </Switch>
       </ThemeProvider>
-    </Router>
   )
 }
 export default App
