@@ -62,6 +62,15 @@ function App() {
   //   background: "white",
   //   text: "black",
   // }
+  const pageTransitionEffects = pathArg => {
+    if(pathArg === "/"){
+      return ""
+    } else if (pathArg === "/contact"){
+      return "contactTransition"
+    } else {
+      return "mainTransition"
+    }
+  }
   return (
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle/>{/* Stylesheet Styled Components*/}
@@ -71,8 +80,8 @@ function App() {
           {routes.map(({ path, Component, name })=>{
             return <Route key={name} path={path} exact>
                       {({match}) => (
-                        <CSSTransition in={match != null} timeout={1200} classNames={path === "/" ? "" : "page"} unmountOnExit >
-                          <div className="page">
+                        <CSSTransition in={match != null} timeout={1200} classNames={pageTransitionEffects(path)} unmountOnExit >
+                          <div className="mainTransition contactTransition">
                             <Component/>
                           </div>
                         </CSSTransition>
