@@ -4,6 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 //-Components
 import Cross from '../components/contact/Cross'
+import AllComp from '../components/contact/AllComp'
 
 
 const Container = styled.div`
@@ -23,6 +24,7 @@ function Contact() {
   return (
     <Container>
       <Cross />
+      <AllComp />
       
     </Container>
   )
