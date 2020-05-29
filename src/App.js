@@ -46,7 +46,7 @@ const routes = [
   { path: "/", name: "Home", Component: Home},
   { path: "/services", name: "Services", Component: Services},
   { path: "/projects", name: "Projects", Component: Projects},
-  { path: "/projects/:idName/:idNumber", name: "Projects", Component: InnerProject},
+  { path: "/projects/:idName/:idNumber", name: "Inner Projects", Component: InnerProject},
   { path: "/contact", name: "Contact", Component: Contact},
 ]
 
@@ -55,8 +55,10 @@ const routes = [
 function App() {
   //Dark & Light Vesrions
   const darkTheme = {
-    background: "black",
-    text: "white",
+    black: "black",
+    white: "white",
+    smallFontSize: "0.75em", //12px
+    mediumFontSize: "1.5625em", //12px
   }
   // const lightTheme = {
   //   background: "white",

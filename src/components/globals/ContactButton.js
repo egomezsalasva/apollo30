@@ -26,13 +26,13 @@ const ButtonBoxV2 = styled.div`
     /* left: 4vw; */
     width: 135px;
     height: ${buttonHeight};
-    border: ${props => props.theme.text} solid 2px;
+    border: ${props => props.theme.white} solid 2px;
     cursor: pointer;
 `
 const ButtonText = styled.h3`
     font-family: 'Press Start 2P';
     font-size: 12px;
-    color: ${props => props.theme.text};
+    color: ${props => props.theme.white};
     text-align: center;
     text-transform: uppercase;
     line-height: ${buttonHeight};

@@ -20,7 +20,7 @@ const NavOptionArea = styled.div`
 const NavTitle = styled.p`
     font-family: 'Press Start 2P';
     font-size: 12px;
-    color: ${props => props.theme.text};
+    color: ${props => props.theme.white};
     letter-spacing: 0;
     text-align: center;
     line-height: 60px;

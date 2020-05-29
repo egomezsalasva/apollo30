@@ -32,7 +32,7 @@ const Slogan = styled.p`
     font-family: 'Gotham-Book';
     font-size: 0.75em;
     line-height: 1.3;
-    color: ${props => props.theme.text};
+    color: ${props => props.theme.white};
     text-align: center;
     width: ${w255px};
     max-width: 300px;

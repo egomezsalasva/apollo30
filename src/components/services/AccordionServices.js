@@ -25,9 +25,6 @@ const accordionData = [
 
 //STYLES
 //-Variables
-const lightColour = "white"
-const smallFont = "0.75em"
-const mediumFont = "1.5625em"
 // const h17o5px = "2.62368816vh"
 const h22px = "3.29835082vh"
 const w285px = "76vw"
@@ -43,17 +40,17 @@ const SectionContainer= styled.div`
 `
 const Title= styled.h2`
     display: inline-block;
-    color: ${lightColour};
+    color: ${props => props.theme.white};
     text-align: center;
     padding: ${h22px} 0;
     font-family: 'Gotham-Black';
-    font-size: ${mediumFont};
+    font-size: ${props => props.theme.mediumFontSize};
     letter-spacing: 0;
     cursor: pointer;
 `
 const Text= styled.p`
-    color: ${lightColour};
-    font-size: ${smallFont};
+    color: ${props => props.theme.white};
+    font-size: ${props => props.theme.smallFontSize};
     line-height: 1.3;
     width: ${w285px};
     text-align: center;
