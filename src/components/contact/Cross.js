@@ -13,7 +13,7 @@ import cross from '../../imgs/cross.svg'
 const ButtonBox = styled.div`
     position: absolute;
     top: 11px;
-    right: 11x;
+    right: 11px;
     width: 60px;
     height: 60px;
     cursor: pointer;
