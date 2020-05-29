@@ -32,6 +32,7 @@ function Home() {
     }).from([".letteringLogo", ".slogan" ], 1.2, {
       opacity: 0,
       ease: "power3.out",
+      delay: -0.7,
     }).to([".servicesTitle", ".launchesTitle"], 1.2, {
       opacity: 1,
       y: 0,

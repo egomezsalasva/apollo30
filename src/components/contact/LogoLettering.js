@@ -9,10 +9,14 @@ import letteringBlackApollo from '../../imgs/letteringBlackApollo.svg'
 //STYLES
 //-Variables
 const h33px = "4.94752624vh"
+const h90px = "13.4932534vh"
 
 //-Components
 const Lettering = styled.img`
+    position: relative;
+    top: ${h90px};
     display: block;
+    width: 100%;
     height: ${h33px};
     text-align: center;
 `

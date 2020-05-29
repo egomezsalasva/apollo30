@@ -1,7 +1,7 @@
 //IMPORTS
 //-Modules
 import React from 'react'
-import { Switch, Route } from "react-router-dom"
+import { Route } from "react-router-dom"
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { normalize } from 'styled-normalize'
 import {CSSTransition} from 'react-transition-group'
