@@ -12,7 +12,7 @@ const h22px = "3.29835082vh"
 const w285px = "76vw"
 //-Components
 const Container= styled.div`
-
+    margin-top: 15px;
 `
 const Title= styled.h2`
     display: block;
