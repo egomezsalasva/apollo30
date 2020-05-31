@@ -43,8 +43,6 @@ const Slogan = styled.p`
 
 //MAIN COMPONENT
 function HeroComp({letteringLogoClass, planetLogoClass, sloganClass}) {
-
-  
   return (
     <Container>
       <Lettering src={letteringApollo} alt="Apollo30 Lettering" className={letteringLogoClass} />
