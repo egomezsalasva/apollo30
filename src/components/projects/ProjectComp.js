@@ -3,6 +3,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 const Container = styled.div`
     display: inline-block;
 `
@@ -17,6 +18,7 @@ const Image = styled.img`
 
 //MAIN COMPONENT
 function RecentComp({photo}) {
+    
   return (
     <Container>
             {/* <NameBox>

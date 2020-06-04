@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import nikeTest from '../../imgs/NikeTestProject.png'
 import ProjectComp from './ProjectComp'
 
+
+
 const Container = styled.div`
     position: relative;
     display: inline-block;
@@ -19,11 +21,13 @@ const InnerContainer = styled.div`
 `
 
 
+
 //MAIN COMPONENT
 function RecentComp() {
+   
   return (
     <Container>
-        <InnerContainer>
+        <InnerContainer >
             <ProjectComp name="Nike" photo={nikeTest} />
             <ProjectComp name="Nike" photo={nikeTest} />
             <ProjectComp name="Nike" photo={nikeTest} />
@@ -32,7 +36,6 @@ function RecentComp() {
             <ProjectComp name="Nike" photo={nikeTest} />
         </InnerContainer>
     </Container>
-    
   )
 }
 export default RecentComp
