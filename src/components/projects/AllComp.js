@@ -2,7 +2,7 @@
 //-Modules
 import React from 'react'
 import styled from 'styled-components'
-import RecentComp from './RecentComp'
+import RecentComp from './recentComposition/RecentComp'
 
 const Container = styled.div`
 `
