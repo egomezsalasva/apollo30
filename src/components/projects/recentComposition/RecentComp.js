@@ -2,7 +2,7 @@
 //-Modules
 import React from 'react'
 import styled from 'styled-components'
-import SubTitle from './SubTitle'
+import SubTitle from '../SubTitle'
 import ProjectsSlide from './ProjectsSlide'
 
 const Container = styled.div`

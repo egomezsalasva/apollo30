@@ -2,7 +2,7 @@
 //-Modules
 import React from 'react'
 import styled from 'styled-components'
-import nikeTest from '../../imgs/NikeTestProject.png'
+import nikeTest from '../../../imgs/NikeTestProject.png'
 import ProjectComp from './ProjectComp'
 
 
