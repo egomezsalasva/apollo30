@@ -46,7 +46,7 @@ const routes = [
   { path: "/", name: "Home", Component: Home},
   { path: "/services", name: "Services", Component: Services},
   { path: "/projects", name: "Projects", Component: Projects},
-  { path: "/projects/:idName/:idNumber", name: "Inner Projects", Component: InnerProject},
+  { path: "/projects/:id", name: "Inner Projects", Component: InnerProject},
   { path: "/contact", name: "Contact", Component: Contact},
 ]
 

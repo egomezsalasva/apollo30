@@ -16,7 +16,8 @@ const Container = styled.div`
 const InnerContainer = styled.div`
     position: relative;
     display: inline-block;
-    width: calc((257px * 6) + 30px);
+    width: calc( (257px * 6) + (15px * 6) + 30px);
+    height: calc( 270px + 30px);
     overflow: auto;
 `
 
@@ -28,12 +29,12 @@ function RecentComp() {
   return (
     <Container>
         <InnerContainer >
-            <ProjectComp name="Nike" photo={nikeTest} />
-            <ProjectComp name="Nike" photo={nikeTest} />
-            <ProjectComp name="Nike" photo={nikeTest} />
-            <ProjectComp name="Nike" photo={nikeTest} />
-            <ProjectComp name="Nike" photo={nikeTest} />
-            <ProjectComp name="Nike" photo={nikeTest} />
+            <ProjectComp urlLink="/projects/nike" name="Nike" photo={nikeTest} />
+            <ProjectComp urlLink="/projects/nike" name="Nike" photo={nikeTest} />
+            <ProjectComp urlLink="/projects/nike" name="Nike" photo={nikeTest} />
+            <ProjectComp urlLink="/projects/nike" name="Nike" photo={nikeTest} />
+            <ProjectComp urlLink="/projects/nike" name="Nike" photo={nikeTest} />
+            <ProjectComp urlLink="/projects/nike" name="Nike" photo={nikeTest} />
         </InnerContainer>
     </Container>
   )

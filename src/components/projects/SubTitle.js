@@ -9,13 +9,13 @@ const Title = styled.h4`
     color: ${props => props.theme.white};
     letter-spacing: 0;
     margin-left: 30px;
-    margin-bottom: 45px;
+    margin-bottom: ${props => props.marginBottom};
 `
 
 //MAIN COMPONENT
 function SubTitle(props) {
   return (
-  <Title>{props.children}</Title>  
+  <Title marginBottom={ props.marginBottom || "45px" }>{props.children}</Title>  
   )
 }
 export default SubTitle

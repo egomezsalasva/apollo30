@@ -57,7 +57,8 @@
   transform: translate3d(0, 0, 0);
 }
 .mainTransition-exit-active{
-  transform: translate3d(0, 100%, 0);
+  /* transform: translate3d(0, 100%, 0); */
+  transform: translate3d(0, 0, 0);
   transition: transform 800ms ease-out;
 }
 
@@ -78,7 +79,7 @@
   transition: transform 800ms ease-out;
 }
 
-#root {
+/* #root {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -86,4 +87,4 @@
   display: flex;
   align-items: center;
   background: #171720;
-}
+} */

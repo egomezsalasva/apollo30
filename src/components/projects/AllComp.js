@@ -3,6 +3,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import RecentComp from './recentComposition/RecentComp'
+import ClientsComp from './clientsComp/ClientsComp'
 
 const Container = styled.div`
 `
@@ -12,6 +13,7 @@ function AllComp() {
   return (
     <Container>
         <RecentComp/>
+        <ClientsComp/>
     </Container>
     
   )
