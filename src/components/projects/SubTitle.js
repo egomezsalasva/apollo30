@@ -3,6 +3,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+//STYLES
+//-Components
 const Title = styled.h4`
     font-family: 'Gotham-Black';
     font-size: 14px;

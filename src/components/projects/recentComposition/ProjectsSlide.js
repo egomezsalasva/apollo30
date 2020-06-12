@@ -6,6 +6,7 @@ import nikeTest from '../../../imgs/NikeTestProject.png'
 import ProjectComp from './ProjectComp'
 
 
+const h270px = "40.4797601vh"
 
 const Container = styled.div`
     position: relative;
@@ -16,8 +17,8 @@ const Container = styled.div`
 const InnerContainer = styled.div`
     position: relative;
     display: inline-block;
-    width: calc( (257px * 6) + (15px * 6) + 30px);
-    height: calc( 270px + 30px);
+    width: calc( (34.0329835vh * 6) + (15px * 6) + 30px);
+    height: calc( ${h270px} + 30px);
     overflow: auto;
 `
 

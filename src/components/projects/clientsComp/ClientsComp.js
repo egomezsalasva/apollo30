@@ -4,9 +4,12 @@ import React from 'react'
 import styled from 'styled-components'
 import SubTitle from '../SubTitle'
 
+//STYLE
+//-Variables
+const h15px = "2.24887556vh"
+//-Components
 const Container = styled.div`
 `
-
 const ClientName = styled.p`
     display: inline;
     font-family: 'Gotham-Book';
@@ -14,14 +17,14 @@ const ClientName = styled.p`
     color: white;
     letter-spacing: 0;
     text-align: center;
-    line-height: 16.8px;
+    line-height: 17px;
 `
-
 const ListContainer = styled.p`
     padding: 0 30px;
     text-align: center;
 `
 
+//DATA
 const clientList = [
     "Nike", 
     "Vogue",
@@ -43,17 +46,17 @@ const clientList = [
     "La Proa 04",
     "Montana Gallery Barcelona"
 ]
-
+//-Data Manipuation
 const clientListExceptLast =  clientList.slice(0, clientList.length-1)
-
 const lastClientName =  clientList.slice(-1)
 
 
 //MAIN COMPONENT
 function ClientsComp() {
+
   return (
     <Container>
-        <SubTitle marginBottom="15px">Clients</SubTitle>
+        <SubTitle marginBottom={h15px}>Clients</SubTitle>
         <ListContainer>
             {
                 clientListExceptLast.map( clientName => {
