@@ -10,6 +10,10 @@ const h15px = "2.24887556vh"
 //-Components
 const Container = styled.div`
 `
+const ListContainer = styled.div`
+    padding: 0 30px;
+    text-align: center;
+`
 const ClientName = styled.p`
     display: inline;
     font-family: 'Gotham-Book';
@@ -19,10 +23,7 @@ const ClientName = styled.p`
     text-align: center;
     line-height: 17px;
 `
-const ListContainer = styled.p`
-    padding: 0 30px;
-    text-align: center;
-`
+
 
 //DATA
 const clientList = [
@@ -60,7 +61,7 @@ function ClientsComp() {
         <ListContainer>
             {
                 clientListExceptLast.map( clientName => {
-                    return <ClientName>{`${clientName}\u00A0\u00A0·\u00A0\u00A0`}</ClientName>
+                    return <ClientName key={clientName}>{`${clientName}\u00A0\u00A0·\u00A0\u00A0`}</ClientName>
                 })
             }
             <ClientName>{lastClientName}</ClientName>
